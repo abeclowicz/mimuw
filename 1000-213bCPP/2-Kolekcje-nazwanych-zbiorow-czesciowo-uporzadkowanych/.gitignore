@@ -1,0 +1,16 @@
+# Ignore build files
+*.o
+*.out
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+named_poset_collections_example_1
+named_poset_collections_example_2_a
+named_poset_collections_example_2_b

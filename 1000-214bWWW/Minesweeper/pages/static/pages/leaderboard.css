@@ -1,0 +1,34 @@
+@import "variables.css";
+
+.leaderboard-grid {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    max-height: 100%;
+    overflow: auto;
+}
+
+.leaderboard-grid > * {
+    flex-direction: column;
+    padding: 10px;
+}
+
+.leaderboard-grid > * > :nth-last-child(2) {
+    margin-bottom: 20px;
+}
+
+.leaderboard-grid tr[data-position="1"] {
+    background-color: #ffd7007f;
+}
+
+.leaderboard-grid tr[data-position="2"] {
+    background-color: #c0c0c07f;
+}
+
+.leaderboard-grid tr[data-position="3"] {
+    background-color: #cd7f327f;
+}
+
+.leaderboard-grid td {
+    padding: 10px;
+}

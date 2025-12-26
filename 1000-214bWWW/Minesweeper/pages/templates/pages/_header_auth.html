@@ -1,0 +1,14 @@
+{% if user.is_authenticated %}
+    <button id="logout-btn" onclick="logout()" class="sunken flex-center">
+        <span>Log out</span>
+        <span class="material-symbols-outlined">logout</span>
+    </button>
+{% else %}
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <div id="g_id_onload" data-client_id="XXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.apps.googleusercontent.com"
+         data-callback="handleToken">
+    </div>
+
+    <div class="g_id_signin" data-theme="filled_blue"></div>
+{% endif %}

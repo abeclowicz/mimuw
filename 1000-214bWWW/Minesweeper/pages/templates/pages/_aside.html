@@ -1,0 +1,53 @@
+<aside>
+    <nav>
+        <a href="{% url "leaderboard" %}" class="beveled flex-space">
+            <span>Leaderboard</span>
+            <span class="material-icons">leaderboard</span>
+        </a>
+
+        {% if user.is_authenticated %}
+            <a href="{% url "games" %}" class="beveled flex-space">
+                <span>My games</span>
+                <span class="material-symbols-outlined">history</span>
+            </a>
+        {% endif %}
+
+        <span class="divider-text flex-center">Play</span>
+
+        <a href="{% url "play" "easy" %}" class="beveled">
+            <div class="flex-space">
+                <span>Easy</span>
+                <span class="stroke" style="color: green">&starf;</span>
+            </div>
+
+            <marquee id="leaderboard-easy-small"></marquee>
+        </a>
+
+        <a href="{% url "play" "medium" %}" class="beveled">
+            <div class="flex-space">
+                <span>Medium</span>
+                <span class="stroke" style="color: yellow">&starf;&starf;</span>
+            </div>
+
+            <marquee id="leaderboard-medium-small"></marquee>
+        </a>
+
+        <a href="{% url "play" "hard" %}" class="beveled">
+            <div class="flex-space">
+                <span>Hard</span>
+                <span class="stroke" style="color: orange">&starf;&starf;&starf;</span>
+            </div>
+
+            <marquee id="leaderboard-hard-small"></marquee>
+        </a>
+
+        <a href="{% url "play" "expert" %}" class="beveled">
+            <div class="flex-space">
+                <span>Expert</span>
+                <span class="stroke" style="color: red">&starf;&starf;&starf;&starf;</span>
+            </div>
+
+            <marquee id="leaderboard-expert-small"></marquee>
+        </a>
+    </nav>
+</aside>

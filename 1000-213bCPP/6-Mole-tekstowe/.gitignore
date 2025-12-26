@@ -1,0 +1,8 @@
+.vscode/
+.idea/
+
+*.pch
+*.pcm
+*.o
+
+text_moths

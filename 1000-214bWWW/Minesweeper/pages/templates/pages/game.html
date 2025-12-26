@@ -1,0 +1,19 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+    Game #{{ id }}
+{% endblock %}
+
+{% block content %}
+    <div class="beveled game-container">
+        {% include "pages/_game_header.html" %}
+        {% include "pages/_game_board.html" %}
+    </div>
+
+    <script>
+        window.APP_CONFIG = {
+            difficulty: {{ difficulty|default:"null"|escapejs }},
+            id: {{ id|default:"null"|escapejs }}
+        };
+    </script>
+{% endblock %}

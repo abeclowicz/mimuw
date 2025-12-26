@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>
+        {% block title %}{% endblock %} | Minesweeper
+    </title>
+
+    <link rel="icon" type="image/icon" href="{% static "pages/favicon.ico" %}">
+    <link rel="stylesheet" href="{% static "pages/style.css" %}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=VT323&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols and Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        {% include "pages/_header.html" %}
+        {% include "pages/_aside.html" %}
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        {% include "pages/_footer.html" %}
+    </div>
+
+    <script src="{% static "pages/js/main.js" %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+    Leaderboard
+{% endblock %}
+
+{% block content %}
+    <nav class="beveled flex-space" style="margin-bottom: 5px">
+        <div>
+            <label for="leaderboard-limit">Show results</label>
+
+            <select id="leaderboard-limit">
+                <option>5</option>
+                <option selected>10</option>
+                <option>20</option>
+                <option>50</option>
+                <option>100</option>
+            </select>
+        </div>
+
+        <span id="leaderboard-updated-timer"></span>
+    </nav>
+
+    <div class="leaderboard-grid">
+        <div class="beveled flex-center">
+            <div>
+                <span>Easy</span>
+                <span class="stroke" style="color: green">&starf;</span>
+            </div>
+
+            {% include "pages/_table.html" with difficulty="easy" %}
+        </div>
+
+        <div class="beveled flex-center">
+            <div>
+                <span>Medium</span>
+                <span class="stroke" style="color: yellow">&starf;&starf;</span>
+            </div>
+
+            {% include "pages/_table.html" with difficulty="medium" %}
+        </div>
+
+        <div class="beveled flex-center">
+            <div>
+                <span>Hard</span>
+                <span class="stroke" style="color: orange">&starf;&starf;&starf;</span>
+            </div>
+
+            {% include "pages/_table.html" with difficulty="hard" %}
+        </div>
+
+        <div class="beveled flex-center">
+            <div>
+                <span>Expert</span>
+                <span class="stroke" style="color: red">&starf;&starf;&starf;&starf;</span>
+            </div>
+
+            {% include "pages/_table.html" with difficulty="expert" %}
+        </div>
+    </div>
+{% endblock %}

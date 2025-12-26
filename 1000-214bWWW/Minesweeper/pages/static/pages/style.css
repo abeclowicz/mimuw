@@ -1,0 +1,156 @@
+@import "game.css";
+@import "games.css";
+@import "leaderboard.css";
+@import "variables.css";
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-space {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.beveled {
+    background-color: var(--color-bg-light);
+
+    border-top: 3px solid var(--color-border-light);
+    border-right: 3px solid var(--color-border-dark);
+    border-bottom: 3px solid var(--color-border-dark);
+    border-left: 3px solid var(--color-border-light);
+}
+
+.sunken {
+    background-color: var(--color-bg-dark);
+
+    border-top: 3px solid var(--color-border-dark);
+    border-right: 3px solid var(--color-border-light);
+    border-bottom: 3px solid var(--color-border-light);
+    border-left: 3px solid var(--color-border-dark);
+}
+
+
+.divider-text::before, .divider-text::after {
+    background-color: black;
+    content: "";
+    flex: 1;
+    height: 1px;
+}
+
+.divider-text::before {
+    margin-right: 10px;
+}
+
+.divider-text::after {
+    margin-left: 10px;
+}
+
+.stroke {
+    -webkit-text-stroke: 1px black;
+}
+
+body {
+    backdrop-filter: blur(5px);
+    background-image: url("images/background.png");
+    background-size: cover;
+    font-family: "VT323", monospace;
+    margin: 0;
+}
+
+#container {
+    box-shadow: 0 0 5px 1px black;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "aside  main   main"
+        "footer footer footer";
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    height: 100vh;
+    margin: auto;
+    width: 67%;
+}
+
+#container > header {
+    grid-area: header;
+    padding: 10px;
+}
+
+#container > header img {
+    max-height: 80px;
+}
+
+aside {
+    background-color: var(--color-bg-dark);
+    border-right: 3px solid var(--color-border-darker);
+    grid-area: aside;
+}
+
+aside > nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    padding: 5px;
+}
+
+nav > a {
+    font-size: 30px;
+    padding: 0 5px;
+    margin: 3px 0;
+}
+
+nav > a:not(.flex-space) {
+    display: flex;
+    flex-direction: column;
+}
+
+a, a:active, a:hover, a:link, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+marquee {
+    font-size: 14px;
+}
+
+main {
+    background-color: var(--color-bg-darker);
+    grid-area: main;
+    min-height: 0;
+    padding: 10px;
+}
+
+footer {
+    background-color: #1a53ff;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    grid-area: footer;
+}
+
+#logout-btn {
+    background-color: black;
+    font-family: "VT323", monospace;
+    font-size: 30px;
+    color: orangered;
+    padding: 3px 5px;
+}
+
+#logout-btn:hover {
+    transform: rotateZ(2deg);
+}
+
+#logout-btn > :first-child {
+    margin-right: 5px;
+}
+
+iframe {
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+}

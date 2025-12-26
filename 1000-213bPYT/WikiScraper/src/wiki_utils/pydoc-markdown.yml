@@ -1,0 +1,7 @@
+loaders:
+- type: python
+  search_path: ["./wiki_utils"]
+  modules: ["plot_utils", "scrape_utils"]
+
+renderer:
+  type: markdown

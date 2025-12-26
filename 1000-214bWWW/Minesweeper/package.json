@@ -1,0 +1,19 @@
+{
+  "name": "minesweeper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "tsc --noEmit",
+    "build": "npm run check && esbuild pages/static/pages/ts/main.ts --bundle --outfile=pages/static/pages/js/main.js --sourcemap",
+    "watch": "esbuild pages/static/pages/ts/main.ts --bundle --outfile=pages/static/pages/js/main.js --sourcemap --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,33 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+    My games
+{% endblock %}
+
+{% block content %}
+    <div class="games-grid">
+        {% for game in games %}
+            <a href="{% url "game" game.id %}" class="beveled flex-center">
+                <span>Game #{{ game.id }}</span>
+
+                {% if game.difficulty == 1 %}
+                    <span class="stroke" style="color: green">&starf;</span>
+                {% elif game.difficulty == 2 %}
+                    <span class="stroke" style="color: yellow">&starf;&starf;</span>
+                {% elif game.difficulty == 3 %}
+                    <span class="stroke" style="color: orange">&starf;&starf;&starf;</span>
+                {% elif game.difficulty == 4 %}
+                    <span class="stroke" style="color: red">&starf;&starf;&starf;&starf;</span>
+                {% endif %}
+
+                <div class="beveled game-container miniature" data-id="{{ game.id }}"
+                     data-status="{{ game.status }}" data-readonly>
+                    {% include "pages/_game_header.html" %}
+                    {% include "pages/_game_board.html" %}
+                </div>
+            </a>
+        {% empty %}
+            <span class="flex-center">no games</span>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+# Projekt 2
+
+**Dataset:** You will work with an artificially generated dataset, consisting of 2000 samples, 400 input variables and two output variables called *class* and *outcome*. All input variables are standard-scaled real numbers. The *class* variable is discrete and has two possible values: 0 and 1. The *outcome* variable is a real number. Both output variables have non-trivial dependency on some of the input variables. Your task is to build ML models predicting the output variables based on the input variables and discuss the dataset, your models and the nature of the dependencies you uncovered.
+
+**Desired output:** You are supposed to submit a Jupyter notebook with the solutions, commentary, and results by Moodle. Please make sure your notebook opens and works in Google Colab, it will not be graded otherwise. The notebooks should contain the results (values and plots) of your analysis, so that we do not have to run all your codes to grade them. Your solutions will be graded by lab assistants of respective groups. Your solution should include a function that can process a "validation_data.csv" file with the same structure as your training data and compute the classification accuracies and $R^2$ values on these data for both your baseline and best models (in total 4 numbers).
+
+**Specific tasks to perform:**
+
+**Task 1.** *Building baseline models* \
+Given the dataset, you should build baseline models using linear regression and logistic regression for output and class variables, respectively, using all input variables as predictors, without any pre-processing (such as dimensionality reduction). Assess their performance on the training data and estimate their ability to generalize beyond training data by one of the methods you have learned in our classes. Discuss your results.
+
+**Task 2.** *More advanced classification* \
+Using some of the classification methods we have covered in our lectures/labs, try to create an improved model that performs better than your baseline model. You can use more complex strategies using resampling, cross-validation and/or model selection. Utilize the knowledge that the class variable depends on some of the predictors, but not necessarily all. You can also use pre-processing of the input variables, such as dimensionality reduction. If your model is based on some features selected from the original data, you should provide the list of features you have selected. Comment on essential choices you make in the process, and what is the relative improvement over the baseline model.
+
+**Task 3.** *More advanced Regression* \
+Using one of the approaches to model selection that were discussed in our lectures/labs, try to create an improved model that performs better than your baseline regression model. You can use more complex strategies, such as resampling, cross-validation, and/or model selection. Utilize the knowledge that the output variable depends on some of the predictors, but not necessarily all of them. You can also use pre-processing of the input variables, such as dimensionality reduction. Provide an analysis of the subset of features that your model depends on the most and the least. If you used some discrete feature selection method, you should provide the list of selected features. Comment on essential choices you make in the process, and what is the relative improvement over the baseline model.
+
+**Hint:** It is possible to train a classification model with an accuracy > 0.8 and a regression model with Pearson's $R^2$ > 0.5 in the data provided. This is not to say that a model with accuracy 0.79 is necessarily wrong, but that you do not need to push for 0.99, as it is unlikely that such a model will generalize well.

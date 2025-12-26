@@ -1,0 +1,27 @@
+.pytest_cache/
+__pycache__/
+venv/
+
+# Tables and word counts
+*.csv
+*.json
+
+# Images
+*.eps
+*.jpg
+*.jpeg
+*.pdf
+*.pgf
+*.png
+*.ps
+*.raw
+*.rgba
+*.svg
+*.svgz
+*.tif
+*.tiff
+*.webp
+
+# Allow
+!data/img/*
+!data/json/*

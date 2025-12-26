@@ -1,0 +1,34 @@
+@import "variables.css";
+
+.games-grid {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+    max-height: 100%;
+    overflow: auto;
+}
+
+.games-grid > a {
+    flex-direction: column;
+    padding: 10px;
+}
+
+.games-grid > a > :nth-last-child(2) {
+    margin-bottom: 10px;
+}
+
+.miniature {
+    zoom: 0.25;
+}
+
+.miniature[data-status="active"] {
+    box-shadow: 0 0 5px 5px blue;
+}
+
+.miniature[data-status="won"] {
+    box-shadow: 0 0 5px 5px green;
+}
+
+.miniature[data-status="lost"] {
+    box-shadow: 0 0 5px 5px red;
+}

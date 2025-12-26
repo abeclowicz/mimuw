@@ -1,0 +1,86 @@
+@import "variables.css";
+
+.game-container {
+    max-height: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    overflow: auto;
+    padding: 5px;
+    width: max-content;
+}
+
+.game-container > header {
+    background-color: var(--color-bg-light);
+    margin-bottom: 5px;
+}
+
+.game-container > header > * {
+    background-color: black;
+    color: lawngreen;
+    font-size: 26px;
+    padding: 0 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.board {
+    cursor: pointer;
+}
+
+td {
+    border: 2px solid gray;
+    padding: 0;
+}
+
+.tile {
+    background-color: var(--color-bg-dark);
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    height: 26px;
+    width: 26px;
+}
+
+.tile[data-value="1"] {
+    background-image: url("images/1.png")
+}
+
+.tile[data-value="2"] {
+    background-image: url("images/2.png")
+}
+
+.tile[data-value="3"] {
+    background-image: url("images/3.png")
+}
+
+.tile[data-value="4"] {
+    background-image: url("images/4.png")
+}
+
+.tile[data-value="5"] {
+    background-image: url("images/5.png")
+}
+
+.tile[data-value="6"] {
+    background-image: url("images/6.png")
+}
+
+.tile[data-value="7"] {
+    background-image: url("images/7.png")
+}
+
+.tile[data-value="8"] {
+    background-image: url("images/8.png")
+}
+
+.tile[data-value="flag"] {
+    background-image: url("images/flag.png")
+}
+
+.tile[data-value="mine"] {
+    background-image: url("images/mine.png")
+}
+
+.tile[data-value="cross"] {
+    background-image: url("images/cross.png")
+}

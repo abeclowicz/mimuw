@@ -1,0 +1,10 @@
+{% load static %}
+
+<header class="beveled flex-space">
+    <a href="{% url "home" %}">
+        <!-- Made with Nano Banana -->
+        <img src="{% static "pages/images/minesweeper-logo.png" %}" alt="minesweeper logo">
+    </a>
+
+    {% include "pages/_header_auth.html" %}
+</header>
